@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workshops & Training | G. Sindhura Reddy Gogulamudi</title>
+  <meta name="description" content="Practical learning and knowledge sharing in Food Technology, Processing, Quality and Product Development.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">⚡</div>
+        <span>Apex<span class="text-gradient">Hub</span></span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="products.html" class="nav-link">Products</a></li>
+        <li><a href="consultancy.html" class="nav-link">Consultancy</a></li>
+        <li><a href="seminars.html" class="nav-link">Seminars</a></li>
+        <li><a href="workshops.html" class="nav-link active">Workshops</a></li>
+        <li><a href="voluntary.html" class="nav-link">Community</a></li>
+        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="admin.html" class="btn btn-outline btn-sm">Admin Portal</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="section" style="padding-top: 9rem; padding-bottom: 3rem;">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge-tag">Technical Training & Skill Development</span>
+        <h1 class="section-title">Workshops & <span class="text-gradient">Training</span></h1>
+        <p class="section-subtitle">Practical learning and knowledge sharing in Food Technology, Processing, Quality and Product Development.</p>
+      </div>
+
+      <!-- Workshops Grid -->
+      <div class="grid-3" id="workshops-grid">
+        <div class="spinner-container"><div class="spinner"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Workshop Registration Modal -->
+  <div class="modal-backdrop" id="workshop-modal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <h2 id="workshop-modal-title" style="font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 1.5rem;">Workshop Registration</h2>
+      
+      <form id="workshop-reg-form" onsubmit="submitWorkshopRegistration(event)">
+        <input type="hidden" id="workshop-modal-id">
+        <div class="form-group">
+          <label class="form-label">Full Name *</label>
+          <input type="text" id="reg-ws-name" class="form-control" required placeholder="Dr. / Mr. / Ms. Full Name">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address *</label>
+          <input type="email" id="reg-ws-email" class="form-control" required placeholder="name@company.com">
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label class="form-label">Phone Number *</label>
+            <input type="tel" id="reg-ws-phone" class="form-control" required placeholder="+91 98765 43210">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Organization / College</label>
+            <input type="text" id="reg-ws-org" class="form-control" placeholder="Company / University Name">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 1rem;">Submit Workshop Registration</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 G. Sindhura Reddy Gogulamudi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/workshops.js"></script>
+  <script>
+    function closeModal() {
+      document.querySelectorAll('.modal-backdrop').forEach(m => m.classList.remove('active'));
+    }
+  </script>
+</body>
+</html>
+

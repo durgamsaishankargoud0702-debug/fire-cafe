@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Product Development | G. Sindhura Reddy Gogulamudi</title>
+  <meta name="description" content="Exploring innovative, nutritious and value-added food products through research and technology by G. Sindhura Reddy Gogulamudi.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">⚡</div>
+        <span>Apex<span class="text-gradient">Hub</span></span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="products.html" class="nav-link active">Products</a></li>
+        <li><a href="consultancy.html" class="nav-link">Consultancy</a></li>
+        <li><a href="seminars.html" class="nav-link">Seminars</a></li>
+        <li><a href="workshops.html" class="nav-link">Workshops</a></li>
+        <li><a href="voluntary.html" class="nav-link">Community</a></li>
+        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="admin.html" class="btn btn-outline btn-sm">Admin Portal</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="section" style="padding-top: 9rem; padding-bottom: 3rem;">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge-tag">R&D Showcase</span>
+        <h1 class="section-title">Food Product <span class="text-gradient">Development</span></h1>
+        <p class="section-subtitle">Exploring innovative, nutritious and value-added food products through research and technology.</p>
+      </div>
+
+      <!-- Search & Filter Toolbar -->
+      <div class="toolbar reveal">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="search-input" class="form-control" placeholder="Search formulations by product name, ingredient, or focus...">
+        </div>
+
+        <div class="filter-group">
+          <div>
+            <select id="category-filter" class="form-select" style="min-width: 220px;">
+              <option value="All">All Categories</option>
+              <option value="Millet-Based Foods">Millet-Based Foods</option>
+              <option value="Functional Foods">Functional Foods</option>
+              <option value="High-Protein Foods">High-Protein Foods</option>
+              <option value="Bakery Products">Bakery Products</option>
+              <option value="Extruded Products">Extruded Products</option>
+              <option value="Processed Foods">Processed Foods</option>
+              <option value="Nutrition-Focused Products">Nutrition-Focused Products</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="grid-3" id="products-grid">
+        <div class="spinner-container"><div class="spinner"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Details Modal -->
+  <div class="modal-backdrop" id="product-modal">
+    <div class="modal" style="max-width: 800px;">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div id="product-modal-body">
+        <!-- Loaded via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 G. Sindhura Reddy Gogulamudi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/products.js"></script>
+</body>
+</html>
+

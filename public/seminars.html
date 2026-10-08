@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seminars & Knowledge Sharing | G. Sindhura Reddy Gogulamudi</title>
+  <meta name="description" content="Sharing knowledge and practical insights across Food Science, Food Technology, Nutrition and Food Processing.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">⚡</div>
+        <span>Apex<span class="text-gradient">Hub</span></span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="products.html" class="nav-link">Products</a></li>
+        <li><a href="consultancy.html" class="nav-link">Consultancy</a></li>
+        <li><a href="seminars.html" class="nav-link active">Seminars</a></li>
+        <li><a href="workshops.html" class="nav-link">Workshops</a></li>
+        <li><a href="voluntary.html" class="nav-link">Community</a></li>
+        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="admin.html" class="btn btn-outline btn-sm">Admin Portal</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="section" style="padding-top: 9rem; padding-bottom: 3rem;">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge-tag">Academic & Research Discourse</span>
+        <h1 class="section-title">Seminars & <span class="text-gradient">Knowledge Sharing</span></h1>
+        <p class="section-subtitle">Sharing knowledge and practical insights across Food Science, Food Technology, Nutrition and Food Processing.</p>
+      </div>
+
+      <!-- Seminars Grid -->
+      <div class="grid-3" id="seminars-grid">
+        <div class="spinner-container"><div class="spinner"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seminar Registration Modal -->
+  <div class="modal-backdrop" id="seminar-modal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <h2 id="seminar-modal-title" style="font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 1.5rem;">Seminar Registration</h2>
+      
+      <form id="seminar-reg-form" onsubmit="submitSeminarRegistration(event)">
+        <input type="hidden" id="seminar-modal-id">
+        <div class="form-group">
+          <label class="form-label">Full Name *</label>
+          <input type="text" id="reg-sem-name" class="form-control" required placeholder="Dr. / Mr. / Ms. Full Name">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address *</label>
+          <input type="email" id="reg-sem-email" class="form-control" required placeholder="name@institution.com">
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label class="form-label">Phone Number *</label>
+            <input type="tel" id="reg-sem-phone" class="form-control" required placeholder="+91 98765 43210">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Organization / College</label>
+            <input type="text" id="reg-sem-org" class="form-control" placeholder="Institution Name">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 1rem;">Confirm Registration</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 G. Sindhura Reddy Gogulamudi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/seminars.js"></script>
+  <script>
+    function closeModal() {
+      document.querySelectorAll('.modal-backdrop').forEach(m => m.classList.remove('active'));
+    }
+  </script>
+</body>
+</html>
+

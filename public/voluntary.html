@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutrition & Community Impact | G. Sindhura Reddy Gogulamudi</title>
+  <meta name="description" content="Applying Food Technology and nutrition knowledge to initiatives that support healthier communities by G. Sindhura Reddy Gogulamudi.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">⚡</div>
+        <span>Apex<span class="text-gradient">Hub</span></span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="products.html" class="nav-link">Products</a></li>
+        <li><a href="consultancy.html" class="nav-link">Consultancy</a></li>
+        <li><a href="seminars.html" class="nav-link">Seminars</a></li>
+        <li><a href="workshops.html" class="nav-link">Workshops</a></li>
+        <li><a href="voluntary.html" class="nav-link active">Community</a></li>
+        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="admin.html" class="btn btn-outline btn-sm">Admin Portal</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="section" style="padding-top: 9rem; padding-bottom: 3rem;">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge-tag">Public Health & Nutrition Initiatives</span>
+        <h1 class="section-title">Nutrition & <span class="text-gradient">Community Impact</span></h1>
+        <p class="section-subtitle">Applying Food Technology and nutrition knowledge to initiatives that support healthier communities.</p>
+      </div>
+
+      <!-- Documented Impact Cards Grid -->
+      <div class="grid-4" style="margin-bottom: 4rem;">
+        <div class="card reveal">
+          <div style="height: 180px; margin: -2rem -2rem 1.5rem; overflow: hidden; border-radius: var(--radius-lg) var(--radius-lg) 0 0;">
+            <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&auto=format&fit=crop&q=80" alt="Nutritional Baseline Survey" style="width:100%; height:100%; object-fit:cover;" />
+          </div>
+          <span class="badge-tag" style="background: rgba(16, 185, 129, 0.12); color: #34d399; border-color: rgba(16, 185, 129, 0.3);">Giriposhana Project</span>
+          <h3 class="card-title" style="font-size: 1.25rem;">Nutritional Surveys</h3>
+          <p class="card-text">Documented baseline survey conducted for tribal communities as part of the government initiative Giriposhana to evaluate nutritional deficits and dietary habits.</p>
+          <button onclick="openVoluntaryModal('Nutritional Baseline Survey (Giriposhana Project)')" class="btn btn-primary btn-sm" style="margin-top: 0.5rem;">Connect on Survey Work</button>
+        </div>
+
+        <div class="card reveal">
+          <div style="height: 180px; margin: -2rem -2rem 1.5rem; overflow: hidden; border-radius: var(--radius-lg) var(--radius-lg) 0 0;">
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&auto=format&fit=crop&q=80" alt="Nutrition-Focused Food Development" style="width:100%; height:100%; object-fit:cover;" />
+          </div>
+          <span class="badge-tag">R&D Formulation</span>
+          <h3 class="card-title" style="font-size: 1.25rem;">Nutrition-Focused Food Dev</h3>
+          <p class="card-text">Developing high-protein biscuits, instant ragi meals, and nutrient-dense composite flatbread mixes engineered to combat malnourishment.</p>
+          <button onclick="openVoluntaryModal('Nutrition-Focused Food Development')" class="btn btn-primary btn-sm" style="margin-top: 0.5rem;">Learn About Formulations</button>
+        </div>
+
+        <div class="card reveal">
+          <div style="height: 180px; margin: -2rem -2rem 1.5rem; overflow: hidden; border-radius: var(--radius-lg) var(--radius-lg) 0 0;">
+            <img src="https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?w=800&auto=format&fit=crop&q=80" alt="Community Nutrition" style="width:100%; height:100%; object-fit:cover;" />
+          </div>
+          <span class="badge-tag">Public Health</span>
+          <h3 class="card-title" style="font-size: 1.25rem;">Community Nutrition</h3>
+          <p class="card-text">Bridging food technology innovation with public health goals to deliver shelf-stable, bioavailable, and culturally suitable food solutions.</p>
+          <button onclick="openVoluntaryModal('Community Nutrition & Food Tech Initiatives')" class="btn btn-primary btn-sm" style="margin-top: 0.5rem;">Inquire on Interventions</button>
+        </div>
+
+        <div class="card reveal">
+          <div style="height: 180px; margin: -2rem -2rem 1.5rem; overflow: hidden; border-radius: var(--radius-lg) var(--radius-lg) 0 0;">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80" alt="Government Supported Projects" style="width:100%; height:100%; object-fit:cover;" />
+          </div>
+          <span class="badge-tag" style="background: rgba(6, 182, 212, 0.12); color: #06b6d4; border-color: rgba(6, 182, 212, 0.3);">Tribal Development</span>
+          <h3 class="card-title" style="font-size: 1.25rem;">Government Projects</h3>
+          <p class="card-text">Technical support for government-backed projects including groundnut processing plant setup in Wanaparthy under Department of Tribal Development.</p>
+          <button onclick="openVoluntaryModal('Government-Supported Nutrition Projects')" class="btn btn-primary btn-sm" style="margin-top: 0.5rem;">Collaborate on Projects</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Connect / Inquiry Form Modal -->
+  <div class="modal-backdrop" id="voluntary-modal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <h2 style="font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 1.5rem;">Community Nutrition Enquiry</h2>
+      
+      <form id="voluntary-form">
+        <div class="form-group">
+          <label class="form-label">Full Name *</label>
+          <input type="text" id="vol-name" class="form-control" required placeholder="Dr. / Mr. / Ms. Full Name">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address *</label>
+          <input type="email" id="vol-email" class="form-control" required placeholder="name@organization.org">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Phone Number *</label>
+          <input type="tel" id="vol-phone" class="form-control" required placeholder="+91 98765 43210">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Selected Initiative *</label>
+          <select id="vol-initiative" class="form-select" required>
+            <option value="Nutritional Baseline Survey (Giriposhana Project)">Nutritional Baseline Survey (Giriposhana Project)</option>
+            <option value="Nutrition-Focused Food Development">Nutrition-Focused Food Development</option>
+            <option value="Community Nutrition & Food Tech Initiatives">Community Nutrition & Food Tech Initiatives</option>
+            <option value="Government-Supported Nutrition Projects">Government-Supported Nutrition Projects</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Organization / Field of Work</label>
+          <input type="text" id="vol-availability" class="form-control" placeholder="e.g. Public Health NGO, University, Government Dept">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message / Collaboration Proposal</label>
+          <textarea id="vol-message" class="form-control" placeholder="Describe your interest or community initiative requirements..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Submit Enquiry</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 G. Sindhura Reddy Gogulamudi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/voluntary.js"></script>
+  <script>
+    function closeModal() {
+      document.querySelectorAll('.modal-backdrop').forEach(m => m.classList.remove('active'));
+    }
+  </script>
+</body>
+</html>
+

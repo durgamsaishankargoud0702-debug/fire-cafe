@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G. Sindhura Reddy Gogulamudi | Food Technologist & R&D Consultant</title>
+  <meta name="description" content="Professional portfolio of G. Sindhura Reddy Gogulamudi - Food Technologist, R&D Consultant, Food Product Development Specialist and Researcher specializing in functional foods, food processing innovation, and food safety.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Custom Scoped Portfolio Styles */
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 2rem;
+    }
+    .hero-tag {
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      color: #a5b4fc;
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* Timeline Styles */
+    .timeline {
+      position: relative;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1rem 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 28px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, var(--accent-primary) 0%, rgba(99, 102, 241, 0.2) 100%);
+    }
+    @media (min-width: 768px) {
+      .timeline::before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2.5rem;
+      width: 100%;
+    }
+    @media (min-width: 768px) {
+      .timeline-item {
+        width: 50%;
+      }
+      .timeline-item:nth-child(odd) {
+        left: 0;
+        padding-right: 3rem;
+      }
+      .timeline-item:nth-child(even) {
+        left: 50%;
+        padding-left: 3rem;
+      }
+    }
+    @media (max-width: 767px) {
+      .timeline-item {
+        padding-left: 4rem;
+      }
+    }
+    .timeline-dot {
+      position: absolute;
+      top: 1.5rem;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--bg-primary);
+      border: 3px solid var(--accent-primary);
+      box-shadow: 0 0 15px rgba(99, 102, 241, 0.8);
+      z-index: 2;
+    }
+    @media (min-width: 768px) {
+      .timeline-item:nth-child(odd) .timeline-dot {
+        right: -10px;
+      }
+      .timeline-item:nth-child(even) .timeline-dot {
+        left: -10px;
+      }
+    }
+    @media (max-width: 767px) {
+      .timeline-dot {
+        left: 19px;
+      }
+    }
+    .timeline-content {
+      background: var(--bg-card);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      backdrop-filter: blur(12px);
+      transition: var(--transition-normal);
+    }
+    .timeline-content:hover {
+      border-color: rgba(99, 102, 241, 0.4);
+      box-shadow: var(--shadow-glow);
+      transform: translateY(-3px);
+    }
+    .timeline-role {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .timeline-org {
+      color: var(--accent-primary);
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+    }
+    .timeline-date {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border-glass);
+    }
+    .timeline-list {
+      list-style-type: none;
+      padding-left: 0;
+      margin-bottom: 1rem;
+    }
+    .timeline-list li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.4rem;
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+    }
+    .timeline-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent-primary);
+      font-weight: bold;
+    }
+
+    /* Publication & Conference Cards */
+    .pub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-glass);
+      border-left: 4px solid var(--accent-primary);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      transition: var(--transition-normal);
+    }
+    .pub-card:hover {
+      transform: translateX(6px);
+      background: var(--bg-card-hover);
+      border-color: rgba(99, 102, 241, 0.4);
+    }
+
+    /* Compact Grid for Education & Certifications */
+    .info-badge-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      transition: var(--transition-normal);
+    }
+    .info-badge-card:hover {
+      border-color: rgba(99, 102, 241, 0.4);
+      transform: translateY(-3px);
+    }
+    .info-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      background: rgba(99, 102, 241, 0.12);
+      color: var(--accent-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    /* Research Spotlight Box */
+    .research-box {
+      background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(31, 41, 55, 0.8) 100%);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-glow);
+    }
+    .research-box::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.25) 0%, rgba(0, 0, 0, 0) 70%);
+      pointer-events: none;
+    }
+
+    /* CTA Banner */
+    .cta-banner {
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.15) 100%);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: var(--radius-lg);
+      padding: 3.5rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(16px);
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">⚡</div>
+        <span>Apex<span class="text-gradient">Hub</span></span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="products.html" class="nav-link">Products</a></li>
+        <li><a href="consultancy.html" class="nav-link">Consultancy</a></li>
+        <li><a href="seminars.html" class="nav-link">Seminars</a></li>
+        <li><a href="workshops.html" class="nav-link">Workshops</a></li>
+        <li><a href="voluntary.html" class="nav-link">Community</a></li>
+        <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="admin.html" class="btn btn-outline btn-sm">Admin Portal</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 1. Portfolio Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <span class="badge-tag">🌾 Food Technology & R&D Specialist</span>
+        <h1 style="font-size: 3rem; margin-bottom: 0.75rem; line-height: 1.15;">
+          G. Sindhura Reddy <span class="text-gradient">Gogulamudi</span>
+        </h1>
+        <h2 style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 600; color: #a5b4fc; margin-bottom: 1.25rem;">
+          Food Technologist | R&D Consultant | Food Product Development Specialist
+        </h2>
+        <p style="font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+          Food Technologist with over 8 years of hands-on experience in food product development, quality control, food processing innovation, functional foods, nutrition-focused product development and food safety.
+        </p>
+
+        <div class="hero-tags">
+          <span class="hero-tag">✨ Millet-Based & High-Protein Foods</span>
+          <span class="hero-tag">📊 Nutritional Surveys</span>
+          <span class="hero-tag">🏭 Food Plant Setup</span>
+          <span class="hero-tag">🛡️ Food Safety Compliance</span>
+        </div>
+
+        <div class="hero-buttons">
+          <a href="#featured-projects" class="btn btn-primary btn-lg">Explore My Work</a>
+          <a href="consultancy.html" class="btn btn-secondary btn-lg">Contact for Consultancy</a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="glass-card-hero">
+          <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=1000&auto=format&fit=crop&q=80" alt="Food R&D Science Laboratory" class="hero-card-img" />
+          <div class="hero-badge-float">
+            <div style="font-size: 2rem;">🔬</div>
+            <div>
+              <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--text-primary);">8+ Years R&D Expertise</h4>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">Functional Foods & Plant Setup</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Professional Overview -->
+  <section class="section" id="overview">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge-tag">Executive Summary</span>
+        <h2 class="section-title">Professional <span class="text-gradient">Overview</span></h2>
+      </div>
+
+      <div class="card reveal" style="max-width: 1000px; margin: 0 auto; padding: 2.5rem;">
+        <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-primary); margin-bottom: 2rem; text-align: center;">
+          "With over 8 years of experience in Food Technology, I specialize in developing innovative food products, improving food processing systems, evaluating product quality and supporting nutrition-focused food initiatives. My experience spans R&D, functional foods, food processing, quality assurance, food safety, research and industry consultancy."
+        </p>
+
+        <div class="hero-stats" style="border-top: 1px solid var(--border-glass); padding-top: 2rem; justify-content: space-around;">
+          <div class="stat-item" style="text-align: center;">
+            <h3 style="color: var(--accent-primary);">8+</h3>
+            <p>Years Experience</p>
+          </div>
+          <div class="stat-item" style="text-align: center;">
+            <h3 style="color: #06b6d4;">6+</h3>
+            <p>Major Research & R&D Roles</p>
+          </div>
+          <div class="stat-item" style="text-align: center;">
+            <h3 style="color: #10b981;">Ph.D</h3>
+            <p>Pursuing (Teff Research)</p>
+          </div>
+          <div class="stat-item" style="text-align: center;">
+            <h3 style="color: #8b5cf6;">100%</h3>
+            <p>Food Safety & Quality Compliance</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Expertise -->
+  <section class="section" id="expertise">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge-tag">Core Competencies</span>
+        <h2 class="section-title">Areas of <span class="text-gradient">Expertise</span></h2>
+        <p class="section-subtitle">Specialized technical domain capabilities across food science, technology, product development, and technical consulting.</p>
+      </div>
+
+      <div class="grid-4">
+        <div class="card reveal">
+          <div class="card-icon">🧪</div>
+          <h3 class="card-title">Food Product Development</h3>
+          <p class="card-text">Development and optimization of innovative food products and formulations.</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-icon">🌾</div>
+          <h3 class="card-title">Functional Foods</h3>
+          <p class="card-text">Experience with millet-based, high-protein and nutrition-rich food products.</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-icon">⚙️</div>
+          <h3 class="card-title">Food Processing</h3>
+          <p class="card-text">Food processing technology, processing optimization and product development.</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-icon">🛡️</div>
+          <h3 class="card-title">Quality & Food Safety</h3>
+          <p class="card-text">Food quality analysis, quality assurance and compliance with food safety standards.</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-icon">🥗</div>
+          <h3 class="card-title">Nutrition & Functional Nutrition</h3>
+          <p class="card-text">Nutrition-focused product development and nutritional survey experience.</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-icon">💡</div>
+          <h3 class="card-title">R&D Consultancy</h3>
+          <p class="card-text">Research, product trials, process optimization and technical consultancy.</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-icon">⏱️</div>
+          <h3 class="card-title">Shelf-Life & Product Evaluation</h3>
+          <p class="card-text">Shelf-life studies, sensory evaluation and product quality assessment.</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-icon">🏭</div>
+          <h3 class="card-title">Food Plant Setup</h3>
+          <p class="card-text">Experience supporting new food processing plant setup and process-related activities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Professional Experience Timeline -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge-tag">Track Record</span>
+        <h2 class="section-title">Professional <span class="text-gradient">Experience</span></h2>
+        <p class="section-subtitle">Chronological timeline of research, R&D consultancy, academic appointments, and quality management positions.</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Role 1 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3 class="timeline-role">Senior Consultant – R&D</h3>
+            <div class="timeline-org">Trisama Vacuura Agri Engineering and Foods Pvt Ltd</div>
+            <div class="timeline-date">January 2024 – Present | Part-time</div>
+            <ul class="timeline-list">
+              <li>Vacuum-fried food product development with fruits, vegetables, and root crops</li>
+              <li>Raw material evaluation and processing parameter optimization</li>
+              <li>Frying parameter optimization and vacuum fryer performance improvement</li>
+              <li>Product quality analysis and sensory evaluation</li>
+              <li>Shelf-life studies and packaging validation</li>
+              <li>Food safety compliance and operational parameter monitoring</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 2 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3 class="timeline-role">Assistant Professor</h3>
+            <div class="timeline-org">Department of Food Science and Technology, Malla Reddy University</div>
+            <div class="timeline-date">August 2022 – April 2026</div>
+            <ul class="timeline-list">
+              <li>Academic teaching and research in Food Science & Technology</li>
+              <li>Mentoring undergraduate & postgraduate student research projects</li>
+              <li>Curriculum development and practical laboratory instructional management</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 3 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3 class="timeline-role">Consultant – Food Technologist</h3>
+            <div class="timeline-org">ICRISAT – Nutriplus Knowledge Partner Lab</div>
+            <div class="timeline-date">October 2018 – July 2022</div>
+            <ul class="timeline-list">
+              <li>High-protein food development and nutrition-rich biscuits & Indian flatbread</li>
+              <li>Formulation of millet-based foods, instant ragi meals, cookies, and beverages</li>
+              <li>Comprehensive food quality analysis, microbiological studies, and shelf-life studies</li>
+              <li>Food processing studies and execution support for new processing plant setup</li>
+              <li>Technical execution for government-supported nutrition projects</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 4 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3 class="timeline-role">Quality Control Executive</h3>
+            <div class="timeline-org">Jayram Agri and Dairy Farms Pvt Ltd</div>
+            <div class="timeline-date">November 2017 – October 2018</div>
+            <ul class="timeline-list">
+              <li>Quality control and testing of milk and milk products</li>
+              <li>Microbiological testing, chemical analysis, and quality assurance compliance</li>
+              <li>Monitoring dairy processing parameters and adherence to food safety norms</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 5 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3 class="timeline-role">Research Assistant</h3>
+            <div class="timeline-org">Society for Energy, Environment and Development (SEED)</div>
+            <div class="timeline-date">March 2017 – October 2017</div>
+            <ul class="timeline-list">
+              <li>Development and formulation of organic fruit bars using solar drying technology</li>
+              <li>Formulation of nutritional beverages and fruit/vegetable processing</li>
+              <li>Physico-chemical analysis and microbial testing of solar-dried products</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 6 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3 class="timeline-role">Project Intern</h3>
+            <div class="timeline-org">CSIR-CFTRI Resource Centre, Hyderabad</div>
+            <div class="timeline-date">January 2016 – October 2016</div>
+            <ul class="timeline-list">
+              <li>Extruded product development (finger millet shells) enriched with protein and carotenoids</li>
+              <li>Development of cereal-millet-pulse based extruded products</li>
+              <li>Physico-chemical analysis, carotenoid determination, and microbial analysis</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Featured Projects -->
+  <section class="section" id="featured-projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge-tag">R&D Showcase</span>
+        <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+        <p class="section-subtitle">Representative product innovations, formulation studies, research breakthroughs, and plant setup projects.</p>
+      </div>
+
+      <div class="grid-3" id="portfolio-grid">
+        <!-- Dynamic Cards rendered via js/portfolio.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Research & Innovation -->
+  <section class="section" id="research">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge-tag">Academic Excellence</span>
+        <h2 class="section-title">Research & <span class="text-gradient">Innovation</span></h2>
+        <p class="section-subtitle">Advancing the frontiers of food processing technology and cereal science.</p>
+      </div>
+
+      <div class="research-box reveal">
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+          <div>
+            <span class="badge-tag" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); color: #34d399;">Ph.D Research • Pursuing</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.75rem; color: var(--text-primary); margin-top: 0.5rem;">
+              Influence of Different Processing Technologies on Teff (<em>Eragrostis tef</em>) and Its Value Addition
+            </h3>
+          </div>
+          <div style="background: rgba(255,255,255,0.05); padding: 0.75rem 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-glass);">
+            <div style="font-size: 0.8rem; color: var(--text-muted);">Institution</div>
+            <div style="font-weight: 600; color: var(--accent-primary); font-size: 0.95rem;">Vignan's Foundation for Science, Tech & Research</div>
+            <div style="font-size: 0.78rem; color: var(--text-secondary); margin-top: 0.2rem;">Commenced: July 2022</div>
+          </div>
+        </div>
+
+        <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem;">
+          Doctoral investigation analyzing how thermal, non-thermal, mechanical, and physical processing techniques transform the techno-functional, nutritional, and shelf-stability properties of Teff grain to unlock high-value functional food formulations.
+        </p>
+
+        <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-primary); margin-bottom: 1rem;">Core Research Themes:</h4>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+          <span class="hero-tag">🌾 Teff (Eragrostis tef)</span>
+          <span class="hero-tag">⚙️ Millet Processing Technologies</span>
+          <span class="hero-tag">🔊 Ultrasonication & Gamma Irradiation</span>
+          <span class="hero-tag">💡 Value Addition Formulations</span>
+          <span class="hero-tag">📐 Physical & Chemical Properties</span>
+          <span class="hero-tag">🔬 Functional Properties & Sorption Studies</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Publications -->
+  <section class="section" id="publications">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge-tag">Scientific Contributions</span>
+        <h2 class="section-title">Peer-Reviewed <span class="text-gradient">Publications</span></h2>
+        <p class="section-subtitle">Published research articles in international food technology journals.</p>
+      </div>
+
+      <div style="max-width: 900px; margin: 0 auto;">
+        <div class="pub-card reveal">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap;">
+            <h3 style="font-family: var(--font-heading); font-size: 1.25rem; color: var(--text-primary); line-height: 1.4;">
+              Study and Development of Cookies Incorporated with Plantain Banana Peel Powder
+            </h3>
+            <span style="background: rgba(99, 102, 241, 0.2); color: #818cf8; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: var(--radius-full); font-size: 0.85rem;">2025</span>
+          </div>
+          <p style="color: var(--accent-primary); font-size: 0.95rem; font-weight: 500; margin: 0.5rem 0 0.75rem;">
+            International Journal of All Research Education and Scientific Methods (IJARESM)
+          </p>
+          <p style="color: var(--text-secondary); font-size: 0.92rem;">
+            Investigating the utilization and incorporation of plantain banana peel powder in cookie formulation to boost dietary fiber content and evaluate sensory, physical, and nutritional parameters.
+          </p>
+        </div>
+
+        <div class="pub-card reveal">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap;">
+            <h3 style="font-family: var(--font-heading); font-size: 1.25rem; color: var(--text-primary); line-height: 1.4;">
+              Formulation and Evaluation of Finger Millet Based Extruded Product (Finger Millet Shells)
+            </h3>
+            <span style="background: rgba(99, 102, 241, 0.2); color: #818cf8; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: var(--radius-full); font-size: 0.85rem;">2017</span>
+          </div>
+          <p style="color: var(--accent-primary); font-size: 0.95rem; font-weight: 500; margin: 0.5rem 0 0.75rem;">
+            International Journal of Research in Engineering & Technology
+          </p>
+          <p style="color: var(--text-secondary); font-size: 0.92rem;">
+            Formulation, extrusion processing parameters, physical property evaluation, and nutritional characterization of finger millet shell extruded snacks.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Conferences & Presentations -->
+  <section class="section" id="conferences">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge-tag">Academic Discourse</span>
+        <h2 class="section-title">Research Presentations & <span class="text-gradient">Conferences</span></h2>
+        <p class="section-subtitle">Documented paper and poster presentations at major national and international food science conferences.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card reveal">
+          <div style="font-size: 1.5rem; color: var(--accent-primary); margin-bottom: 0.75rem;">📢</div>
+          <h3 class="card-title" style="font-size: 1.15rem;">Effect of Ultrasonication on Teff Millet</h3>
+          <p class="card-text">Paper presentation detailing non-thermal ultrasonication treatment parameters and its effect on teff grain properties.</p>
+        </div>
+
+        <div class="card reveal">
+          <div style="font-size: 1.5rem; color: #06b6d4; margin-bottom: 0.75rem;">☢️</div>
+          <h3 class="card-title" style="font-size: 1.15rem;">Effect of Gamma Irradiation on Teff Millet</h3>
+          <p class="card-text">Research presentation evaluating gamma irradiation processing on microbial decontamination and structural properties of teff.</p>
+        </div>
+
+        <div class="card reveal">
+          <div style="font-size: 1.5rem; color: #10b981; margin-bottom: 0.75rem;">📊</div>
+          <h3 class="card-title" style="font-size: 1.15rem;">Physical, Chemical & Phytochemical Properties of Teff</h3>
+          <p class="card-text">Detailed evaluation of functional bioactive compounds, mineral profiles, and physical indices of teff grain varieties.</p>
+        </div>
+
+        <div class="card reveal">
+          <div style="font-size: 1.5rem; color: #8b5cf6; margin-bottom: 0.75rem;">🔬</div>
+          <h3 class="card-title" style="font-size: 1.15rem;">Functional Properties & Moisture Sorption Studies</h3>
+          <p class="card-text">Presentation on moisture sorption isotherms and functional attributes of protein-enriched extruded products.</p>
+        </div>
+
+        <div class="card reveal">
+          <div style="font-size: 1.5rem; color: #f59e0b; margin-bottom: 0.75rem;">🌍</div>
+          <h3 class="card-title" style="font-size: 1.15rem;">Food and Nutritional Challenges</h3>
+          <p class="card-text">Symposium talk highlighting food security, biofortification, and the role of functional millets in addressing nutritional deficits.</p>
+        </div>
+
+        <div class="card reveal">
+          <div style="font-size: 1.5rem; color: var(--accent-primary); margin-bottom: 0.75rem;">🍫</div>
+          <h3 class="card-title" style="font-size: 1.15rem;">Cereal-Pulse-Millet Extrusion & Probiotic Chocolates</h3>
+          <p class="card-text">Presentations covering innovative cereal-pulse extrusion formulations and bioactive probiotic chocolate development.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Education & 10. Certifications -->
+  <section class="section" id="education-certifications">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem; align-items: start;">
+        
+        <!-- 9. Education -->
+        <div>
+          <div class="section-header reveal" style="text-align: left; margin-bottom: 2rem;">
+            <span class="badge-tag">Academic Credentials</span>
+            <h2 class="section-title" style="font-size: 2rem;">Education</h2>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div class="info-badge-card reveal">
+              <div class="info-icon">🎓</div>
+              <div>
+                <h3 style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--text-primary);">Ph.D – Food Technology</h3>
+                <div style="color: var(--accent-primary); font-weight: 600; font-size: 0.95rem;">Vignan's Foundation for Science and Technology</div>
+                <div style="font-size: 0.85rem; color: #34d399; font-weight: 600; margin-top: 0.25rem;">Status: Pursuing (Started July 2022)</div>
+              </div>
+            </div>
+
+            <div class="info-badge-card reveal">
+              <div class="info-icon">📜</div>
+              <div>
+                <h3 style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--text-primary);">M.Tech – Food Processing Technology</h3>
+                <div style="color: var(--accent-primary); font-weight: 600; font-size: 0.95rem;">Osmania University, University College of Technology</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">Graduated: 2016 | Grade: <strong>8.1 / 10 CGPA</strong></div>
+              </div>
+            </div>
+
+            <div class="info-badge-card reveal">
+              <div class="info-icon">🏛️</div>
+              <div>
+                <h3 style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--text-primary);">B.Tech – Food Technology</h3>
+                <div style="color: var(--accent-primary); font-weight: 600; font-size: 0.95rem;">Acharya NG Ranga Agricultural University</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">Graduated: 2014 | Grade: <strong>7.42 / 10 OGPA</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10. Certifications -->
+        <div>
+          <div class="section-header reveal" style="text-align: left; margin-bottom: 2rem;">
+            <span class="badge-tag">Professional Training</span>
+            <h2 class="section-title" style="font-size: 2rem;">Certifications</h2>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div class="info-badge-card reveal">
+              <div class="info-icon" style="background: rgba(6, 182, 212, 0.12); color: #06b6d4;">🚀</div>
+              <div>
+                <h3 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-primary);">EDP on "Startup Today"</h3>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">Executive Entrepreneurship Development Programme.</p>
+              </div>
+            </div>
+
+            <div class="info-badge-card reveal">
+              <div class="info-icon" style="background: rgba(16, 185, 129, 0.12); color: #10b981;">🥩</div>
+              <div>
+                <h3 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-primary);">EDP on Value Added Meat Products Processing</h3>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">Advanced processing technology & product development.</p>
+              </div>
+            </div>
+
+            <div class="info-badge-card reveal">
+              <div class="info-icon" style="background: rgba(139, 92, 246, 0.12); color: #8b5cf6;">🔬</div>
+              <div>
+                <h3 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-primary);">Techno-Management Programme</h3>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">Modern Instrumentation Techniques for Food Analysis.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Final CTA -->
+  <section class="section" style="padding-bottom: 6rem;">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <span class="badge-tag" style="margin-bottom: 1.25rem;">Let's Collaborate</span>
+        <h2 style="font-family: var(--font-heading); font-size: 2.4rem; color: var(--text-primary); margin-bottom: 1rem;">
+          Have a Food Innovation Project in Mind?
+        </h2>
+        <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 750px; margin: 0 auto 2.25rem; line-height: 1.6;">
+          Let's collaborate on food product development, R&D, processing optimization, quality evaluation or nutrition-focused innovation.
+        </p>
+        <a href="consultancy.html" class="btn btn-primary btn-lg">Let's Discuss a Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 G. Sindhura Reddy Gogulamudi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/portfolio.js"></script>
+</body>
+</html>
+

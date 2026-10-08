@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Apex Enterprise Hub</title>
+  <meta name="description" content="Protected Administrator Control Panel for products, seminars, workshops, consultancies, and registrations management.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background: var(--bg-primary);">
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🛡️</div>
+        <span>Apex<span class="text-gradient">Admin Panel</span></span>
+      </a>
+
+      <div class="nav-actions">
+        <span style="font-size: 0.9rem; color: var(--text-secondary);">Logged in as: <strong id="admin-user-name" style="color: var(--text-primary);">Admin</strong></span>
+        <button id="admin-logout-btn" class="btn btn-outline btn-sm">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Protected Admin Area Layout -->
+  <div class="admin-layout" id="admin-dashboard-area" style="display: none;">
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+      <div style="margin-bottom: 1.5rem; padding: 0 0.5rem;">
+        <input type="text" id="admin-search-input" class="form-control" placeholder="Search table..." style="padding: 0.5rem 0.85rem; font-size: 0.85rem;">
+      </div>
+
+      <ul class="sidebar-menu">
+        <li class="sidebar-item active" data-tab="overview">📊 Overview</li>
+        <li class="sidebar-item" data-tab="products">📦 Products</li>
+        <li class="sidebar-item" data-tab="seminars">🎤 Seminars</li>
+        <li class="sidebar-item" data-tab="workshops">🛠️ Workshops</li>
+        <li class="sidebar-item" data-tab="registrations">📝 Registrations</li>
+        <li class="sidebar-item" data-tab="consultancies">💼 Consultancies</li>
+        <li class="sidebar-item" data-tab="voluntary">🤝 Volunteers</li>
+        <li class="sidebar-item" data-tab="contacts">📬 Contact Messages</li>
+      </ul>
+    </aside>
+
+    <!-- Main Content Panel -->
+    <main class="admin-content" id="tab-content">
+      <div class="spinner-container"><div class="spinner"></div></div>
+    </main>
+  </div>
+
+  <!-- Admin Auth Login Modal -->
+  <div class="modal-backdrop active" id="admin-login-modal">
+    <div class="modal" style="max-width: 440px; padding: 2.5rem; text-align: center;">
+      <div class="logo-icon" style="margin: 0 auto 1rem; width: 50px; height: 50px; font-size: 1.6rem;">🛡️</div>
+      <h2 style="font-family: var(--font-heading); margin-bottom: 0.5rem;">Admin Authentication</h2>
+      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">Please sign in with your JWT admin credentials to access management tools.</p>
+
+      <form id="admin-login-form">
+        <div class="form-group">
+          <label class="form-label">Admin Email</label>
+          <input type="email" id="login-email" class="form-control" value="admin@example.com" required placeholder="admin@example.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <input type="password" id="login-password" class="form-control" value="admin123" required placeholder="••••••••">
+        </div>
+        
+        <div style="background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.3); padding: 0.75rem; border-radius: var(--radius-sm); font-size: 0.8rem; color: #818cf8; margin-bottom: 1.5rem; text-align: left;">
+          💡 <strong>Default Admin Credentials:</strong><br>
+          Email: <code>admin@example.com</code><br>
+          Password: <code>admin123</code>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Sign In to Dashboard</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Generic Admin CRUD Modal -->
+  <div class="modal-backdrop" id="admin-crud-modal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeCrudModal()">✕</button>
+      <h2 id="crud-modal-title" style="font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 1.5rem;">Manage Record</h2>
+      <div id="crud-modal-body">
+        <!-- Dynamic Form Inserted Here -->
+      </div>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/admin.js"></script>
+  <script>
+    function closeCrudModal() {
+      document.getElementById('admin-crud-modal').classList.remove('active');
+    }
+  </script>
+</body>
+</html>
